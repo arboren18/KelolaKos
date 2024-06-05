@@ -26,7 +26,7 @@ model Kos {
 model Penyewa {
   id                String   @id @default(cuid())
   idKos             String
-  kos               Kos?     @relation(fields: [idKos], references: [id])
+  kos               Kos?     @relation(fields: [idKos], references: [id], onDelete: Cascade, onUpdate: Cascade)
   nama              String
   nomorKamar        Int
   statusPembayaran  String

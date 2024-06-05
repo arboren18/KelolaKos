@@ -124,6 +124,7 @@ export const deleteKos = async (id: string) => {
 			where: { id }
 		});
 	} catch (error) {
+		console.log(error);
 		return { message: "Gagal menghapus data" };
 	}
 
